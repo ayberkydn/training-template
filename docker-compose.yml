@@ -1,0 +1,16 @@
+version: "3"
+services:
+  lab:
+    container_name: lab
+    user: ayb
+    image: ayberkydn/deep-learning
+    working_dir: ${PWD}
+    volumes:
+      - ~/:/home/ayb
+    stdin_open: true
+    tty: false
+
+    ports:
+      - 8888:8888
+      - 6006:6006
+      - 8080:8080
